@@ -75,7 +75,7 @@ function Add_colorHeader() {
   currentCell = spreadsheet.getCurrentCell();
   spreadsheet.getSelection().getNextDataRange(SpreadsheetApp.Direction.DOWN).activate();
   currentCell.activateAsCurrentCell();
-  spreadsheet.getActiveRangeList().setBackground('#d9d9d9');
+  spreadsheet.getActiveRangeList().setBackground('#efefef');
   spreadsheet.getRange('H970').activate();
   spreadsheet.getCurrentCell().getNextDataCell(SpreadsheetApp.Direction.UP).activate();
   spreadsheet.getRange('H2').activate();
