@@ -39,3 +39,44 @@ function Header_Bold_Center() {
   spreadsheet.getActiveRangeList().setFontWeight('bold')
   .setHorizontalAlignment('center');
 };
+
+function Add_Status_Add_Notes() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  spreadsheet.getRange('G1').activate();
+  spreadsheet.getCurrentCell().setValue('Status');
+  spreadsheet.getRange('H1').activate();
+  spreadsheet.getCurrentCell().setValue('Notes');
+  spreadsheet.getRange('H:H').activate();
+  spreadsheet.getActiveRangeList().setWrapStrategy(SpreadsheetApp.WrapStrategy.WRAP);
+  spreadsheet.getRange('G1:H1').activate();
+  spreadsheet.getActiveRangeList().setHorizontalAlignment('center')
+  .setFontWeight('bold');
+};
+
+function Add_colorHeader() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  spreadsheet.getRange('F1').activate();
+  var currentCell = spreadsheet.getCurrentCell();
+  spreadsheet.getSelection().getNextDataRange(SpreadsheetApp.Direction.PREVIOUS).activate();
+  currentCell.activateAsCurrentCell();
+  spreadsheet.getActiveRangeList().setBackground('#d0e0e3');
+  spreadsheet.getRange('H1').activate();
+  currentCell = spreadsheet.getCurrentCell();
+  spreadsheet.getSelection().getNextDataRange(SpreadsheetApp.Direction.NEXT).activate();
+  currentCell.activateAsCurrentCell();
+  currentCell = spreadsheet.getCurrentCell();
+  spreadsheet.getSelection().getNextDataRange(SpreadsheetApp.Direction.NEXT).activate();
+  currentCell.activateAsCurrentCell();
+  spreadsheet.getActiveRangeList().setBackground('#d0e0e3');
+  spreadsheet.getRange('G1').activate();
+  spreadsheet.getActiveRangeList().setFontColor('#ff9900')
+  .setBackground('#666666');
+  spreadsheet.getRange('G2').activate();
+  currentCell = spreadsheet.getCurrentCell();
+  spreadsheet.getSelection().getNextDataRange(SpreadsheetApp.Direction.DOWN).activate();
+  currentCell.activateAsCurrentCell();
+  spreadsheet.getActiveRangeList().setBackground('#d9d9d9');
+  spreadsheet.getRange('H970').activate();
+  spreadsheet.getCurrentCell().getNextDataCell(SpreadsheetApp.Direction.UP).activate();
+  spreadsheet.getRange('H2').activate();
+};
