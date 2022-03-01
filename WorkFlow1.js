@@ -93,6 +93,6 @@ function Resize_Notes() {
   var spreadsheet = SpreadsheetApp.getActive();
   spreadsheet.getRange('I9').activate();
   spreadsheet.getActiveSheet().setColumnWidth(8, 321);
-    spreadsheet.getActiveSheet().setColumnWidth(7, 144)
+  spreadsheet.getActiveSheet().setColumnWidth(7, 144);
   spreadsheet.getRange('A2').activate();
 };
