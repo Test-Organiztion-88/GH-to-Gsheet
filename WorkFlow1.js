@@ -31,3 +31,11 @@ function add_extraColumns() {
   spreadsheet.getActiveSheet().insertColumnsBefore(spreadsheet.getActiveRange().getColumn(), 1);
   spreadsheet.getActiveRange().offset(0, 0, spreadsheet.getActiveRange().getNumRows(), 1).activate();
 };
+
+function Header_Bold_Center() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  spreadsheet.getRange('1:1').activate();
+  spreadsheet.getActiveSheet().setFrozenRows(1);
+  spreadsheet.getActiveRangeList().setFontWeight('bold')
+  .setHorizontalAlignment('center');
+};
