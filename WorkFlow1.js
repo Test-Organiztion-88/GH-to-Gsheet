@@ -88,3 +88,9 @@ function Social_Link_Sort() {
   spreadsheet.getActiveRange().offset(1, 0, spreadsheet.getActiveRange().getNumRows() - 1).sort({column: 5, ascending: true});
   spreadsheet.getRange('F2').activate();
 };
+
+function Resize_Notes() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  spreadsheet.getRange('I9').activate();
+  spreadsheet.getActiveSheet().setColumnWidth(8, 321);
+};
