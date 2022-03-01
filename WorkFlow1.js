@@ -80,3 +80,11 @@ function Add_colorHeader() {
   spreadsheet.getCurrentCell().getNextDataCell(SpreadsheetApp.Direction.UP).activate();
   spreadsheet.getRange('H2').activate();
 };
+
+function Social_Link_Sort() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  var sheet = spreadsheet.getActiveSheet();
+  sheet.getRange(1, 1, sheet.getMaxRows(), sheet.getMaxColumns()).activate();
+  spreadsheet.getActiveRange().offset(1, 0, spreadsheet.getActiveRange().getNumRows() - 1).sort({column: 5, ascending: true});
+  spreadsheet.getRange('F2').activate();
+};
