@@ -1,3 +1,6 @@
+function Test(){
+};
+
 function Front_fontSize_ColumnWrap() {
   var spreadsheet = SpreadsheetApp.getActive();
   spreadsheet.getRange('A1').activate();
